@@ -1,0 +1,1024 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Resource",
+        "importPath": "flask_restful",
+        "description": "flask_restful",
+        "isExtraImport": true,
+        "detail": "flask_restful",
+        "documentation": {
+            "value": "\n```python\nimport flask_restful\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Api",
+        "importPath": "flask_restful",
+        "description": "flask_restful",
+        "isExtraImport": true,
+        "detail": "flask_restful",
+        "documentation": {
+            "value": "\n```python\nimport flask_restful\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "JWT",
+        "importPath": "flask_jwt",
+        "description": "flask_jwt",
+        "isExtraImport": true,
+        "detail": "flask_jwt",
+        "documentation": {
+            "value": "\n```python\nimport flask_jwt\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "authenticate",
+        "importPath": "security",
+        "description": "security",
+        "isExtraImport": true,
+        "detail": "security",
+        "documentation": {
+            "value": "\n```python\nimport security\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "identity",
+        "importPath": "security",
+        "description": "security",
+        "isExtraImport": true,
+        "detail": "security",
+        "documentation": {
+            "value": "\n```python\nimport security\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "safe_str_cmp",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {
+            "value": "\n```python\nimport werkzeug.security\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {
+            "value": "\n```python\nimport os\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {
+            "value": "\n```python\nimport site\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {
+            "value": "\n```python\nimport sys\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "warnings",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "warnings",
+        "description": "warnings",
+        "detail": "warnings",
+        "documentation": {
+            "value": "\n```python\nimport warnings\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "opcode",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "opcode",
+        "description": "opcode",
+        "detail": "opcode",
+        "documentation": {
+            "value": "\n```python\nimport opcode\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "dist",
+        "importPath": "distutils",
+        "description": "distutils",
+        "isExtraImport": true,
+        "detail": "distutils",
+        "documentation": {
+            "value": "\n```python\nimport distutils\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sysconfig",
+        "importPath": "distutils",
+        "description": "distutils",
+        "isExtraImport": true,
+        "detail": "distutils",
+        "documentation": {
+            "value": "\n```python\nimport distutils\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "code.app",
+        "description": "code.app",
+        "peekOfCode": "class Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):\n        if next(filter(lambda x:x[\"name\"] == name,items),None):\n            return {\"message\":\"An item with name '{}' already existed\".format(name)},400\n        data = request.get_json()\n        item = {\"name\":name, \"price\":data[\"price\"]}\n        items.append(item)",
+        "detail": "code.app",
+        "documentation": {
+            "value": "\n```python\nfrom code.app import Item\n```\n\n```python\n\n\n```\n\n```python\nclass Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):\n        if next(filter(lambda x:x[\"name\"] == name,items),None):\n            return {\"message\":\"An item with name '{}' already existed\".format(name)},400\n        data = request.get_json()\n        item = {\"name\":name, \"price\":data[\"price\"]}\n        items.append(item)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "ItemList",
+        "kind": 6,
+        "importPath": "code.app",
+        "description": "code.app",
+        "peekOfCode": "class ItemList(Resource):\n    def get(self):\n        return {\"items\":items}\napi.add_resource(Item, \"/item/<string:name>\")\napi.add_resource(ItemList,\"/items\")\napp.run(port=5000,debug=True)",
+        "detail": "code.app",
+        "documentation": {
+            "value": "\n```python\nfrom code.app import ItemList\n```\n\n```python\n\n\n```\n\n```python\nclass ItemList(Resource):\n    def get(self):\n        return {\"items\":items}\napi.add_resource(Item, \"/item/<string:name>\")\napi.add_resource(ItemList,\"/items\")\napp.run(port=5000,debug=True)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "code.app",
+        "description": "code.app",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SECRET_KEY'] = 'super-secret'\napi = Api(app)\njwt = JWT(app,authenticate, identity)\nitems = []\nclass Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):",
+        "detail": "code.app",
+        "documentation": {
+            "value": "\n```python\nfrom code.app import app\n```\n\n```python\n\n\n```\n\n```python\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'super-secret'\napi = Api(app)\njwt = JWT(app,authenticate, identity)\nitems = []\nclass Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "app.config['SECRET_KEY']",
+        "kind": 5,
+        "importPath": "code.app",
+        "description": "code.app",
+        "peekOfCode": "app.config['SECRET_KEY'] = 'super-secret'\napi = Api(app)\njwt = JWT(app,authenticate, identity)\nitems = []\nclass Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):\n        if next(filter(lambda x:x[\"name\"] == name,items),None):",
+        "detail": "code.app",
+        "documentation": {
+            "value": "\n```python\nfrom code.app import app.config['SECRET_KEY']\n```\n\n```python\n\n\n```\n\n```python\napp.config['SECRET_KEY'] = 'super-secret'\napi = Api(app)\njwt = JWT(app,authenticate, identity)\nitems = []\nclass Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):\n        if next(filter(lambda x:x[\"name\"] == name,items),None):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "api",
+        "kind": 5,
+        "importPath": "code.app",
+        "description": "code.app",
+        "peekOfCode": "api = Api(app)\njwt = JWT(app,authenticate, identity)\nitems = []\nclass Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):\n        if next(filter(lambda x:x[\"name\"] == name,items),None):\n            return {\"message\":\"An item with name '{}' already existed\".format(name)},400",
+        "detail": "code.app",
+        "documentation": {
+            "value": "\n```python\nfrom code.app import api\n```\n\n```python\n\n\n```\n\n```python\napi = Api(app)\njwt = JWT(app,authenticate, identity)\nitems = []\nclass Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):\n        if next(filter(lambda x:x[\"name\"] == name,items),None):\n            return {\"message\":\"An item with name '{}' already existed\".format(name)},400\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "jwt",
+        "kind": 5,
+        "importPath": "code.app",
+        "description": "code.app",
+        "peekOfCode": "jwt = JWT(app,authenticate, identity)\nitems = []\nclass Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):\n        if next(filter(lambda x:x[\"name\"] == name,items),None):\n            return {\"message\":\"An item with name '{}' already existed\".format(name)},400\n        data = request.get_json()",
+        "detail": "code.app",
+        "documentation": {
+            "value": "\n```python\nfrom code.app import jwt\n```\n\n```python\n\n\n```\n\n```python\njwt = JWT(app,authenticate, identity)\nitems = []\nclass Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):\n        if next(filter(lambda x:x[\"name\"] == name,items),None):\n            return {\"message\":\"An item with name '{}' already existed\".format(name)},400\n        data = request.get_json()\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "items",
+        "kind": 5,
+        "importPath": "code.app",
+        "description": "code.app",
+        "peekOfCode": "items = []\nclass Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):\n        if next(filter(lambda x:x[\"name\"] == name,items),None):\n            return {\"message\":\"An item with name '{}' already existed\".format(name)},400\n        data = request.get_json()\n        item = {\"name\":name, \"price\":data[\"price\"]}",
+        "detail": "code.app",
+        "documentation": {
+            "value": "\n```python\nfrom code.app import items\n```\n\n```python\n\n\n```\n\n```python\nitems = []\nclass Item(Resource):\n    def get(self, name):\n        item = next(filter(lambda x:x[\"name\"] == name, items), None)\n        return {\"item\":item}, 200 if item else 404 #200 if item is not None else 404\n    def post(self,name):\n        if next(filter(lambda x:x[\"name\"] == name,items),None):\n            return {\"message\":\"An item with name '{}' already existed\".format(name)},400\n        data = request.get_json()\n        item = {\"name\":name, \"price\":data[\"price\"]}\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "code.security",
+        "description": "code.security",
+        "peekOfCode": "class User(object):\n    def __init__(self,_id, username, password):\n        self._id = id\n        self.username = username\n        self.password = password\n    def __str__(self):\n        return \"User(id='%s')\" % self._id\nusers = [\n    User(1,'bob','asdf')\n]",
+        "detail": "code.security",
+        "documentation": {
+            "value": "\n```python\nfrom code.security import User\n```\n\n```python\n\n\n```\n\n```python\nclass User(object):\n    def __init__(self,_id, username, password):\n        self._id = id\n        self.username = username\n        self.password = password\n    def __str__(self):\n        return \"User(id='%s')\" % self._id\nusers = [\n    User(1,'bob','asdf')\n]\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "authenticate",
+        "kind": 2,
+        "importPath": "code.security",
+        "description": "code.security",
+        "peekOfCode": "def authenticate(username, password):\n    user = userid_mapping.get(username,None)\n    if user and safe_str_cmp(user.password('utf-8'),password.encode('utf-8')):\n        return user\ndef identity(payload):\n    user_id = payload['identity']\n    return userid_mapping.get(user_id, None)",
+        "detail": "code.security",
+        "documentation": {
+            "value": "\n```python\nfrom code.security import authenticate\n```\n\n```python\n\n\n```\n\n```python\ndef authenticate(username, password):\n    user = userid_mapping.get(username,None)\n    if user and safe_str_cmp(user.password('utf-8'),password.encode('utf-8')):\n        return user\ndef identity(payload):\n    user_id = payload['identity']\n    return userid_mapping.get(user_id, None)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "identity",
+        "kind": 2,
+        "importPath": "code.security",
+        "description": "code.security",
+        "peekOfCode": "def identity(payload):\n    user_id = payload['identity']\n    return userid_mapping.get(user_id, None)",
+        "detail": "code.security",
+        "documentation": {
+            "value": "\n```python\nfrom code.security import identity\n```\n\n```python\n\n\n```\n\n```python\ndef identity(payload):\n    user_id = payload['identity']\n    return userid_mapping.get(user_id, None)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "users",
+        "kind": 5,
+        "importPath": "code.security",
+        "description": "code.security",
+        "peekOfCode": "users = [\n    User(1,'bob','asdf')\n]\nusername_mapping = {u.username:u for u in users}\nuserid_mapping = {u._id:u for u in users}\ndef authenticate(username, password):\n    user = userid_mapping.get(username,None)\n    if user and safe_str_cmp(user.password('utf-8'),password.encode('utf-8')):\n        return user\ndef identity(payload):",
+        "detail": "code.security",
+        "documentation": {
+            "value": "\n```python\nfrom code.security import users\n```\n\n```python\n\n\n```\n\n```python\nusers = [\n    User(1,'bob','asdf')\n]\nusername_mapping = {u.username:u for u in users}\nuserid_mapping = {u._id:u for u in users}\ndef authenticate(username, password):\n    user = userid_mapping.get(username,None)\n    if user and safe_str_cmp(user.password('utf-8'),password.encode('utf-8')):\n        return user\ndef identity(payload):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "username_mapping",
+        "kind": 5,
+        "importPath": "code.security",
+        "description": "code.security",
+        "peekOfCode": "username_mapping = {u.username:u for u in users}\nuserid_mapping = {u._id:u for u in users}\ndef authenticate(username, password):\n    user = userid_mapping.get(username,None)\n    if user and safe_str_cmp(user.password('utf-8'),password.encode('utf-8')):\n        return user\ndef identity(payload):\n    user_id = payload['identity']\n    return userid_mapping.get(user_id, None)",
+        "detail": "code.security",
+        "documentation": {
+            "value": "\n```python\nfrom code.security import username_mapping\n```\n\n```python\n\n\n```\n\n```python\nusername_mapping = {u.username:u for u in users}\nuserid_mapping = {u._id:u for u in users}\ndef authenticate(username, password):\n    user = userid_mapping.get(username,None)\n    if user and safe_str_cmp(user.password('utf-8'),password.encode('utf-8')):\n        return user\ndef identity(payload):\n    user_id = payload['identity']\n    return userid_mapping.get(user_id, None)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "userid_mapping",
+        "kind": 5,
+        "importPath": "code.security",
+        "description": "code.security",
+        "peekOfCode": "userid_mapping = {u._id:u for u in users}\ndef authenticate(username, password):\n    user = userid_mapping.get(username,None)\n    if user and safe_str_cmp(user.password('utf-8'),password.encode('utf-8')):\n        return user\ndef identity(payload):\n    user_id = payload['identity']\n    return userid_mapping.get(user_id, None)",
+        "detail": "code.security",
+        "documentation": {
+            "value": "\n```python\nfrom code.security import userid_mapping\n```\n\n```python\n\n\n```\n\n```python\nuserid_mapping = {u._id:u for u in users}\ndef authenticate(username, password):\n    user = userid_mapping.get(username,None)\n    if user and safe_str_cmp(user.password('utf-8'),password.encode('utf-8')):\n        return user\ndef identity(payload):\n    user_id = payload['identity']\n    return userid_mapping.get(user_id, None)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "env.bin.activate_this",
+        "description": "env.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(os.path.abspath(__file__))\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nbase = os.path.dirname(bin_dir)\n# virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV\"] = base\n# add the virtual environments site-package to the host python import mechanism\nIS_PYPY = hasattr(sys, \"pypy_version_info\")\nIS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")",
+        "detail": "env.bin.activate_this",
+        "documentation": {
+            "value": "\n```python\nfrom env.bin.activate_this import bin_dir\n```\n\n```python\n\n\n```\n\n```python\nbin_dir = os.path.dirname(os.path.abspath(__file__))\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nbase = os.path.dirname(bin_dir)\n# virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV\"] = base\n# add the virtual environments site-package to the host python import mechanism\nIS_PYPY = hasattr(sys, \"pypy_version_info\")\nIS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "env.bin.activate_this",
+        "description": "env.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nbase = os.path.dirname(bin_dir)\n# virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV\"] = base\n# add the virtual environments site-package to the host python import mechanism\nIS_PYPY = hasattr(sys, \"pypy_version_info\")\nIS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")\nelif IS_PYPY:",
+        "detail": "env.bin.activate_this",
+        "documentation": {
+            "value": "\n```python\nfrom env.bin.activate_this import os.environ[\"PATH\"]\n```\n\n```python\n\n\n```\n\n```python\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nbase = os.path.dirname(bin_dir)\n# virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV\"] = base\n# add the virtual environments site-package to the host python import mechanism\nIS_PYPY = hasattr(sys, \"pypy_version_info\")\nIS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")\nelif IS_PYPY:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "env.bin.activate_this",
+        "description": "env.bin.activate_this",
+        "peekOfCode": "base = os.path.dirname(bin_dir)\n# virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV\"] = base\n# add the virtual environments site-package to the host python import mechanism\nIS_PYPY = hasattr(sys, \"pypy_version_info\")\nIS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")\nelif IS_PYPY:\n    site_packages = os.path.join(base, \"site-packages\")",
+        "detail": "env.bin.activate_this",
+        "documentation": {
+            "value": "\n```python\nfrom env.bin.activate_this import base\n```\n\n```python\n\n\n```\n\n```python\nbase = os.path.dirname(bin_dir)\n# virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV\"] = base\n# add the virtual environments site-package to the host python import mechanism\nIS_PYPY = hasattr(sys, \"pypy_version_info\")\nIS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")\nelif IS_PYPY:\n    site_packages = os.path.join(base, \"site-packages\")\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "env.bin.activate_this",
+        "description": "env.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base\n# add the virtual environments site-package to the host python import mechanism\nIS_PYPY = hasattr(sys, \"pypy_version_info\")\nIS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")\nelif IS_PYPY:\n    site_packages = os.path.join(base, \"site-packages\")\nelse:\n    IS_WIN = sys.platform == \"win32\"",
+        "detail": "env.bin.activate_this",
+        "documentation": {
+            "value": "\n```python\nfrom env.bin.activate_this import os.environ[\"VIRTUAL_ENV\"]\n```\n\n```python\n\n\n```\n\n```python\nos.environ[\"VIRTUAL_ENV\"] = base\n# add the virtual environments site-package to the host python import mechanism\nIS_PYPY = hasattr(sys, \"pypy_version_info\")\nIS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")\nelif IS_PYPY:\n    site_packages = os.path.join(base, \"site-packages\")\nelse:\n    IS_WIN = sys.platform == \"win32\"\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "IS_PYPY",
+        "kind": 5,
+        "importPath": "env.bin.activate_this",
+        "description": "env.bin.activate_this",
+        "peekOfCode": "IS_PYPY = hasattr(sys, \"pypy_version_info\")\nIS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")\nelif IS_PYPY:\n    site_packages = os.path.join(base, \"site-packages\")\nelse:\n    IS_WIN = sys.platform == \"win32\"\n    if IS_WIN:\n        site_packages = os.path.join(base, \"Lib\", \"site-packages\")",
+        "detail": "env.bin.activate_this",
+        "documentation": {
+            "value": "\n```python\nfrom env.bin.activate_this import IS_PYPY\n```\n\n```python\n\n\n```\n\n```python\nIS_PYPY = hasattr(sys, \"pypy_version_info\")\nIS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")\nelif IS_PYPY:\n    site_packages = os.path.join(base, \"site-packages\")\nelse:\n    IS_WIN = sys.platform == \"win32\"\n    if IS_WIN:\n        site_packages = os.path.join(base, \"Lib\", \"site-packages\")\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "IS_JYTHON",
+        "kind": 5,
+        "importPath": "env.bin.activate_this",
+        "description": "env.bin.activate_this",
+        "peekOfCode": "IS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")\nelif IS_PYPY:\n    site_packages = os.path.join(base, \"site-packages\")\nelse:\n    IS_WIN = sys.platform == \"win32\"\n    if IS_WIN:\n        site_packages = os.path.join(base, \"Lib\", \"site-packages\")\n    else:",
+        "detail": "env.bin.activate_this",
+        "documentation": {
+            "value": "\n```python\nfrom env.bin.activate_this import IS_JYTHON\n```\n\n```python\n\n\n```\n\n```python\nIS_JYTHON = sys.platform.startswith(\"java\")\nif IS_JYTHON:\n    site_packages = os.path.join(base, \"Lib\", \"site-packages\")\nelif IS_PYPY:\n    site_packages = os.path.join(base, \"site-packages\")\nelse:\n    IS_WIN = sys.platform == \"win32\"\n    if IS_WIN:\n        site_packages = os.path.join(base, \"Lib\", \"site-packages\")\n    else:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "prev",
+        "kind": 5,
+        "importPath": "env.bin.activate_this",
+        "description": "env.bin.activate_this",
+        "peekOfCode": "prev = set(sys.path)\nsite.addsitedir(site_packages)\nsys.real_prefix = sys.prefix\nsys.prefix = base\n# Move the added items to the front of the path, in place\nnew = list(sys.path)\nsys.path[:] = [i for i in new if i not in prev] + [i for i in new if i in prev]",
+        "detail": "env.bin.activate_this",
+        "documentation": {
+            "value": "\n```python\nfrom env.bin.activate_this import prev\n```\n\n```python\n\n\n```\n\n```python\nprev = set(sys.path)\nsite.addsitedir(site_packages)\nsys.real_prefix = sys.prefix\nsys.prefix = base\n# Move the added items to the front of the path, in place\nnew = list(sys.path)\nsys.path[:] = [i for i in new if i not in prev] + [i for i in new if i in prev]\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "env.bin.activate_this",
+        "description": "env.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base\n# Move the added items to the front of the path, in place\nnew = list(sys.path)\nsys.path[:] = [i for i in new if i not in prev] + [i for i in new if i in prev]",
+        "detail": "env.bin.activate_this",
+        "documentation": {
+            "value": "\n```python\nfrom env.bin.activate_this import sys.real_prefix\n```\n\n```python\n\n\n```\n\n```python\nsys.real_prefix = sys.prefix\nsys.prefix = base\n# Move the added items to the front of the path, in place\nnew = list(sys.path)\nsys.path[:] = [i for i in new if i not in prev] + [i for i in new if i in prev]\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "env.bin.activate_this",
+        "description": "env.bin.activate_this",
+        "peekOfCode": "sys.prefix = base\n# Move the added items to the front of the path, in place\nnew = list(sys.path)\nsys.path[:] = [i for i in new if i not in prev] + [i for i in new if i in prev]",
+        "detail": "env.bin.activate_this",
+        "documentation": {
+            "value": "\n```python\nfrom env.bin.activate_this import sys.prefix\n```\n\n```python\n\n\n```\n\n```python\nsys.prefix = base\n# Move the added items to the front of the path, in place\nnew = list(sys.path)\nsys.path[:] = [i for i in new if i not in prev] + [i for i in new if i in prev]\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "new",
+        "kind": 5,
+        "importPath": "env.bin.activate_this",
+        "description": "env.bin.activate_this",
+        "peekOfCode": "new = list(sys.path)\nsys.path[:] = [i for i in new if i not in prev] + [i for i in new if i in prev]",
+        "detail": "env.bin.activate_this",
+        "documentation": {
+            "value": "\n```python\nfrom env.bin.activate_this import new\n```\n\n```python\n\n\n```\n\n```python\nnew = list(sys.path)\nsys.path[:] = [i for i in new if i not in prev] + [i for i in new if i in prev]\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "env.bin.activate_this",
+        "description": "env.bin.activate_this",
+        "peekOfCode": "sys.path[:] = [i for i in new if i not in prev] + [i for i in new if i in prev]",
+        "detail": "env.bin.activate_this",
+        "documentation": {
+            "value": "\n```python\nfrom env.bin.activate_this import sys.path[:]\n```\n\n```python\n\n\n```\n\n```python\nsys.path[:] = [i for i in new if i not in prev] + [i for i in new if i in prev]\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "find_config_files",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "def find_config_files(self):\n    found = old_find_config_files(self)\n    if os.name == \"posix\":\n        user_filename = \".pydistutils.cfg\"\n    else:\n        user_filename = \"pydistutils.cfg\"\n    user_filename = os.path.join(sys.prefix, user_filename)\n    if os.path.isfile(user_filename):\n        for item in list(found):\n            if item.endswith(\"pydistutils.cfg\"):",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import find_config_files\n```\n\n```python\n\n\n```\n\n```python\ndef find_config_files(self):\n    found = old_find_config_files(self)\n    if os.name == \"posix\":\n        user_filename = \".pydistutils.cfg\"\n    else:\n        user_filename = \"pydistutils.cfg\"\n    user_filename = os.path.join(sys.prefix, user_filename)\n    if os.path.isfile(user_filename):\n        for item in list(found):\n            if item.endswith(\"pydistutils.cfg\"):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sysconfig_get_python_inc",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "def sysconfig_get_python_inc(plat_specific=0, prefix=None):\n    if prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_inc(plat_specific, prefix)\nsysconfig_get_python_inc.__doc__ = old_get_python_inc.__doc__\nsysconfig.get_python_inc = sysconfig_get_python_inc\nold_get_python_lib = sysconfig.get_python_lib\ndef sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:\n        prefix = sys.real_prefix",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import sysconfig_get_python_inc\n```\n\n```python\n\n\n```\n\n```python\ndef sysconfig_get_python_inc(plat_specific=0, prefix=None):\n    if prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_inc(plat_specific, prefix)\nsysconfig_get_python_inc.__doc__ = old_get_python_inc.__doc__\nsysconfig.get_python_inc = sysconfig_get_python_inc\nold_get_python_lib = sysconfig.get_python_lib\ndef sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:\n        prefix = sys.real_prefix\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sysconfig_get_python_lib",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "def sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_lib(plat_specific, standard_lib, prefix)\nsysconfig_get_python_lib.__doc__ = old_get_python_lib.__doc__\nsysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)\n    if sys.platform == \"win32\":",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import sysconfig_get_python_lib\n```\n\n```python\n\n\n```\n\n```python\ndef sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_lib(plat_specific, standard_lib, prefix)\nsysconfig_get_python_lib.__doc__ = old_get_python_lib.__doc__\nsysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)\n    if sys.platform == \"win32\":\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sysconfig_get_config_vars",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "def sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)\n    if sys.platform == \"win32\":\n        lib_dir = os.path.join(sys.real_prefix, \"libs\")\n        if isinstance(real_vars, dict) and \"LIBDIR\" not in real_vars:\n            real_vars[\"LIBDIR\"] = lib_dir  # asked for all\n        elif isinstance(real_vars, list) and \"LIBDIR\" in args:\n            real_vars = real_vars + [lib_dir]  # asked for list\n    return real_vars\nsysconfig_get_config_vars.__doc__ = old_get_config_vars.__doc__",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import sysconfig_get_config_vars\n```\n\n```python\n\n\n```\n\n```python\ndef sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)\n    if sys.platform == \"win32\":\n        lib_dir = os.path.join(sys.real_prefix, \"libs\")\n        if isinstance(real_vars, dict) and \"LIBDIR\" not in real_vars:\n            real_vars[\"LIBDIR\"] = lib_dir  # asked for all\n        elif isinstance(real_vars, list) and \"LIBDIR\" in args:\n            real_vars = real_vars + [lib_dir]  # asked for list\n    return real_vars\nsysconfig_get_config_vars.__doc__ = old_get_config_vars.__doc__\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "dirname",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "dirname = os.path.dirname\ndistutils_path = os.path.join(os.path.dirname(opcode.__file__), \"distutils\")\nif os.path.normpath(distutils_path) == os.path.dirname(os.path.normpath(__file__)):\n    warnings.warn(\"The virtualenv distutils package at %s appears to be in the same location as the system distutils?\")\nelse:\n    __path__.insert(0, distutils_path)  # noqa: F821\n    if sys.version_info < (3, 4):\n        import imp\n        real_distutils = imp.load_module(\"_virtualenv_distutils\", None, distutils_path, (\"\", \"\", imp.PKG_DIRECTORY))\n    else:",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import dirname\n```\n\n```python\n\n\n```\n\n```python\ndirname = os.path.dirname\ndistutils_path = os.path.join(os.path.dirname(opcode.__file__), \"distutils\")\nif os.path.normpath(distutils_path) == os.path.dirname(os.path.normpath(__file__)):\n    warnings.warn(\"The virtualenv distutils package at %s appears to be in the same location as the system distutils?\")\nelse:\n    __path__.insert(0, distutils_path)  # noqa: F821\n    if sys.version_info < (3, 4):\n        import imp\n        real_distutils = imp.load_module(\"_virtualenv_distutils\", None, distutils_path, (\"\", \"\", imp.PKG_DIRECTORY))\n    else:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "distutils_path",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "distutils_path = os.path.join(os.path.dirname(opcode.__file__), \"distutils\")\nif os.path.normpath(distutils_path) == os.path.dirname(os.path.normpath(__file__)):\n    warnings.warn(\"The virtualenv distutils package at %s appears to be in the same location as the system distutils?\")\nelse:\n    __path__.insert(0, distutils_path)  # noqa: F821\n    if sys.version_info < (3, 4):\n        import imp\n        real_distutils = imp.load_module(\"_virtualenv_distutils\", None, distutils_path, (\"\", \"\", imp.PKG_DIRECTORY))\n    else:\n        import importlib.machinery",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import distutils_path\n```\n\n```python\n\n\n```\n\n```python\ndistutils_path = os.path.join(os.path.dirname(opcode.__file__), \"distutils\")\nif os.path.normpath(distutils_path) == os.path.dirname(os.path.normpath(__file__)):\n    warnings.warn(\"The virtualenv distutils package at %s appears to be in the same location as the system distutils?\")\nelse:\n    __path__.insert(0, distutils_path)  # noqa: F821\n    if sys.version_info < (3, 4):\n        import imp\n        real_distutils = imp.load_module(\"_virtualenv_distutils\", None, distutils_path, (\"\", \"\", imp.PKG_DIRECTORY))\n    else:\n        import importlib.machinery\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "old_find_config_files",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "old_find_config_files = dist.Distribution.find_config_files\ndef find_config_files(self):\n    found = old_find_config_files(self)\n    if os.name == \"posix\":\n        user_filename = \".pydistutils.cfg\"\n    else:\n        user_filename = \"pydistutils.cfg\"\n    user_filename = os.path.join(sys.prefix, user_filename)\n    if os.path.isfile(user_filename):\n        for item in list(found):",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import old_find_config_files\n```\n\n```python\n\n\n```\n\n```python\nold_find_config_files = dist.Distribution.find_config_files\ndef find_config_files(self):\n    found = old_find_config_files(self)\n    if os.name == \"posix\":\n        user_filename = \".pydistutils.cfg\"\n    else:\n        user_filename = \"pydistutils.cfg\"\n    user_filename = os.path.join(sys.prefix, user_filename)\n    if os.path.isfile(user_filename):\n        for item in list(found):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "dist.Distribution.find_config_files",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "dist.Distribution.find_config_files = find_config_files\n# distutils.sysconfig patches:\nold_get_python_inc = sysconfig.get_python_inc\ndef sysconfig_get_python_inc(plat_specific=0, prefix=None):\n    if prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_inc(plat_specific, prefix)\nsysconfig_get_python_inc.__doc__ = old_get_python_inc.__doc__\nsysconfig.get_python_inc = sysconfig_get_python_inc\nold_get_python_lib = sysconfig.get_python_lib",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import dist.Distribution.find_config_files\n```\n\n```python\n\n\n```\n\n```python\ndist.Distribution.find_config_files = find_config_files\n# distutils.sysconfig patches:\nold_get_python_inc = sysconfig.get_python_inc\ndef sysconfig_get_python_inc(plat_specific=0, prefix=None):\n    if prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_inc(plat_specific, prefix)\nsysconfig_get_python_inc.__doc__ = old_get_python_inc.__doc__\nsysconfig.get_python_inc = sysconfig_get_python_inc\nold_get_python_lib = sysconfig.get_python_lib\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "old_get_python_inc",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "old_get_python_inc = sysconfig.get_python_inc\ndef sysconfig_get_python_inc(plat_specific=0, prefix=None):\n    if prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_inc(plat_specific, prefix)\nsysconfig_get_python_inc.__doc__ = old_get_python_inc.__doc__\nsysconfig.get_python_inc = sysconfig_get_python_inc\nold_get_python_lib = sysconfig.get_python_lib\ndef sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import old_get_python_inc\n```\n\n```python\n\n\n```\n\n```python\nold_get_python_inc = sysconfig.get_python_inc\ndef sysconfig_get_python_inc(plat_specific=0, prefix=None):\n    if prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_inc(plat_specific, prefix)\nsysconfig_get_python_inc.__doc__ = old_get_python_inc.__doc__\nsysconfig.get_python_inc = sysconfig_get_python_inc\nold_get_python_lib = sysconfig.get_python_lib\ndef sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sysconfig_get_python_inc.__doc__",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "sysconfig_get_python_inc.__doc__ = old_get_python_inc.__doc__\nsysconfig.get_python_inc = sysconfig_get_python_inc\nold_get_python_lib = sysconfig.get_python_lib\ndef sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_lib(plat_specific, standard_lib, prefix)\nsysconfig_get_python_lib.__doc__ = old_get_python_lib.__doc__\nsysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import sysconfig_get_python_inc.__doc__\n```\n\n```python\n\n\n```\n\n```python\nsysconfig_get_python_inc.__doc__ = old_get_python_inc.__doc__\nsysconfig.get_python_inc = sysconfig_get_python_inc\nold_get_python_lib = sysconfig.get_python_lib\ndef sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_lib(plat_specific, standard_lib, prefix)\nsysconfig_get_python_lib.__doc__ = old_get_python_lib.__doc__\nsysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sysconfig.get_python_inc",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "sysconfig.get_python_inc = sysconfig_get_python_inc\nold_get_python_lib = sysconfig.get_python_lib\ndef sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_lib(plat_specific, standard_lib, prefix)\nsysconfig_get_python_lib.__doc__ = old_get_python_lib.__doc__\nsysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import sysconfig.get_python_inc\n```\n\n```python\n\n\n```\n\n```python\nsysconfig.get_python_inc = sysconfig_get_python_inc\nold_get_python_lib = sysconfig.get_python_lib\ndef sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_lib(plat_specific, standard_lib, prefix)\nsysconfig_get_python_lib.__doc__ = old_get_python_lib.__doc__\nsysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "old_get_python_lib",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "old_get_python_lib = sysconfig.get_python_lib\ndef sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_lib(plat_specific, standard_lib, prefix)\nsysconfig_get_python_lib.__doc__ = old_get_python_lib.__doc__\nsysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import old_get_python_lib\n```\n\n```python\n\n\n```\n\n```python\nold_get_python_lib = sysconfig.get_python_lib\ndef sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):\n    if standard_lib and prefix is None:\n        prefix = sys.real_prefix\n    return old_get_python_lib(plat_specific, standard_lib, prefix)\nsysconfig_get_python_lib.__doc__ = old_get_python_lib.__doc__\nsysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sysconfig_get_python_lib.__doc__",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "sysconfig_get_python_lib.__doc__ = old_get_python_lib.__doc__\nsysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)\n    if sys.platform == \"win32\":\n        lib_dir = os.path.join(sys.real_prefix, \"libs\")\n        if isinstance(real_vars, dict) and \"LIBDIR\" not in real_vars:\n            real_vars[\"LIBDIR\"] = lib_dir  # asked for all\n        elif isinstance(real_vars, list) and \"LIBDIR\" in args:",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import sysconfig_get_python_lib.__doc__\n```\n\n```python\n\n\n```\n\n```python\nsysconfig_get_python_lib.__doc__ = old_get_python_lib.__doc__\nsysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)\n    if sys.platform == \"win32\":\n        lib_dir = os.path.join(sys.real_prefix, \"libs\")\n        if isinstance(real_vars, dict) and \"LIBDIR\" not in real_vars:\n            real_vars[\"LIBDIR\"] = lib_dir  # asked for all\n        elif isinstance(real_vars, list) and \"LIBDIR\" in args:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sysconfig.get_python_lib",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "sysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)\n    if sys.platform == \"win32\":\n        lib_dir = os.path.join(sys.real_prefix, \"libs\")\n        if isinstance(real_vars, dict) and \"LIBDIR\" not in real_vars:\n            real_vars[\"LIBDIR\"] = lib_dir  # asked for all\n        elif isinstance(real_vars, list) and \"LIBDIR\" in args:\n            real_vars = real_vars + [lib_dir]  # asked for list",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import sysconfig.get_python_lib\n```\n\n```python\n\n\n```\n\n```python\nsysconfig.get_python_lib = sysconfig_get_python_lib\nold_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)\n    if sys.platform == \"win32\":\n        lib_dir = os.path.join(sys.real_prefix, \"libs\")\n        if isinstance(real_vars, dict) and \"LIBDIR\" not in real_vars:\n            real_vars[\"LIBDIR\"] = lib_dir  # asked for all\n        elif isinstance(real_vars, list) and \"LIBDIR\" in args:\n            real_vars = real_vars + [lib_dir]  # asked for list\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "old_get_config_vars",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "old_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)\n    if sys.platform == \"win32\":\n        lib_dir = os.path.join(sys.real_prefix, \"libs\")\n        if isinstance(real_vars, dict) and \"LIBDIR\" not in real_vars:\n            real_vars[\"LIBDIR\"] = lib_dir  # asked for all\n        elif isinstance(real_vars, list) and \"LIBDIR\" in args:\n            real_vars = real_vars + [lib_dir]  # asked for list\n    return real_vars",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import old_get_config_vars\n```\n\n```python\n\n\n```\n\n```python\nold_get_config_vars = sysconfig.get_config_vars\ndef sysconfig_get_config_vars(*args):\n    real_vars = old_get_config_vars(*args)\n    if sys.platform == \"win32\":\n        lib_dir = os.path.join(sys.real_prefix, \"libs\")\n        if isinstance(real_vars, dict) and \"LIBDIR\" not in real_vars:\n            real_vars[\"LIBDIR\"] = lib_dir  # asked for all\n        elif isinstance(real_vars, list) and \"LIBDIR\" in args:\n            real_vars = real_vars + [lib_dir]  # asked for list\n    return real_vars\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sysconfig_get_config_vars.__doc__",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "sysconfig_get_config_vars.__doc__ = old_get_config_vars.__doc__\nsysconfig.get_config_vars = sysconfig_get_config_vars",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import sysconfig_get_config_vars.__doc__\n```\n\n```python\n\n\n```\n\n```python\nsysconfig_get_config_vars.__doc__ = old_get_config_vars.__doc__\nsysconfig.get_config_vars = sysconfig_get_config_vars\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sysconfig.get_config_vars",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.distutils.__init__",
+        "description": "env.lib.python3.8.distutils.__init__",
+        "peekOfCode": "sysconfig.get_config_vars = sysconfig_get_config_vars",
+        "detail": "env.lib.python3.8.distutils.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.distutils.__init__ import sysconfig.get_config_vars\n```\n\n```python\n\n\n```\n\n```python\nsysconfig.get_config_vars = sysconfig_get_config_vars\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "_Printer",
+        "kind": 6,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "class _Printer(object):\n    \"\"\"interactive prompt objects for printing the license text, a list of\n    contributors and the copyright notice.\"\"\"\n    MAXLINES = 23\n    def __init__(self, name, data, files=(), dirs=()):\n        self.__name = name\n        self.__data = data\n        self.__files = files\n        self.__dirs = dirs\n        self.__lines = None",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import _Printer\n```\n\n```python\n\n\n```\n\n```python\nclass _Printer(object):\n    \"\"\"interactive prompt objects for printing the license text, a list of\n    contributors and the copyright notice.\"\"\"\n    MAXLINES = 23\n    def __init__(self, name, data, files=(), dirs=()):\n        self.__name = name\n        self.__data = data\n        self.__files = files\n        self.__dirs = dirs\n        self.__lines = None\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "_Helper",
+        "kind": 6,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "class _Helper(object):\n    \"\"\"Define the built-in 'help'.\n    This is a wrapper around pydoc.help (with a twist).\n    \"\"\"\n    def __repr__(self):\n        return \"Type help() for interactive help, \" \"or help(object) for help about object.\"\n    def __call__(self, *args, **kwds):\n        import pydoc\n        return pydoc.help(*args, **kwds)\ndef sethelper():",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import _Helper\n```\n\n```python\n\n\n```\n\n```python\nclass _Helper(object):\n    \"\"\"Define the built-in 'help'.\n    This is a wrapper around pydoc.help (with a twist).\n    \"\"\"\n    def __repr__(self):\n        return \"Type help() for interactive help, \" \"or help(object) for help about object.\"\n    def __call__(self, *args, **kwds):\n        import pydoc\n        return pydoc.help(*args, **kwds)\ndef sethelper():\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "makepath",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)\ndef abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"\n    for m in sys.modules.values():\n        f = getattr(m, \"__file__\", None)\n        if f is None:\n            continue",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import makepath\n```\n\n```python\n\n\n```\n\n```python\ndef makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)\ndef abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"\n    for m in sys.modules.values():\n        f = getattr(m, \"__file__\", None)\n        if f is None:\n            continue\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "abs__file__",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"\n    for m in sys.modules.values():\n        f = getattr(m, \"__file__\", None)\n        if f is None:\n            continue\n        m.__file__ = os.path.abspath(f)\ndef removeduppaths():\n    \"\"\" Remove duplicate entries from sys.path along with making them\n    absolute\"\"\"",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import abs__file__\n```\n\n```python\n\n\n```\n\n```python\ndef abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"\n    for m in sys.modules.values():\n        f = getattr(m, \"__file__\", None)\n        if f is None:\n            continue\n        m.__file__ = os.path.abspath(f)\ndef removeduppaths():\n    \"\"\" Remove duplicate entries from sys.path along with making them\n    absolute\"\"\"\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "removeduppaths",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def removeduppaths():\n    \"\"\" Remove duplicate entries from sys.path along with making them\n    absolute\"\"\"\n    # This ensures that the initial path provided by the interpreter contains\n    # only absolute pathnames, even if we're running from the build directory.\n    L = []\n    known_paths = set()\n    for dir in sys.path:\n        # Filter out duplicate paths (on case-insensitive file systems also\n        # if they only differ in case); turn relative paths into absolute",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import removeduppaths\n```\n\n```python\n\n\n```\n\n```python\ndef removeduppaths():\n    \"\"\" Remove duplicate entries from sys.path along with making them\n    absolute\"\"\"\n    # This ensures that the initial path provided by the interpreter contains\n    # only absolute pathnames, even if we're running from the build directory.\n    L = []\n    known_paths = set()\n    for dir in sys.path:\n        # Filter out duplicate paths (on case-insensitive file systems also\n        # if they only differ in case); turn relative paths into absolute\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "addbuilddir",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def addbuilddir():\n    \"\"\"Append ./build/lib.<platform> in case we're running in the build dir\n    (especially for Guido :-)\"\"\"\n    from distutils.util import get_platform\n    s = \"build/lib.{}-{}.{}\".format(get_platform(), *sys.version_info)\n    if hasattr(sys, \"gettotalrefcount\"):\n        s += \"-pydebug\"\n    s = os.path.join(os.path.dirname(sys.path[-1]), s)\n    sys.path.append(s)\ndef _init_pathinfo():",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import addbuilddir\n```\n\n```python\n\n\n```\n\n```python\ndef addbuilddir():\n    \"\"\"Append ./build/lib.<platform> in case we're running in the build dir\n    (especially for Guido :-)\"\"\"\n    from distutils.util import get_platform\n    s = \"build/lib.{}-{}.{}\".format(get_platform(), *sys.version_info)\n    if hasattr(sys, \"gettotalrefcount\"):\n        s += \"-pydebug\"\n    s = os.path.join(os.path.dirname(sys.path[-1]), s)\n    sys.path.append(s)\ndef _init_pathinfo():\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "addpackage",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def addpackage(sitedir, name, known_paths):\n    \"\"\"Add a new path to known_paths by combining sitedir and 'name' or execute\n    sitedir if it starts with 'import'\"\"\"\n    if known_paths is None:\n        _init_pathinfo()\n        reset = 1\n    else:\n        reset = 0\n    fullname = os.path.join(sitedir, name)\n    try:",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import addpackage\n```\n\n```python\n\n\n```\n\n```python\ndef addpackage(sitedir, name, known_paths):\n    \"\"\"Add a new path to known_paths by combining sitedir and 'name' or execute\n    sitedir if it starts with 'import'\"\"\"\n    if known_paths is None:\n        _init_pathinfo()\n        reset = 1\n    else:\n        reset = 0\n    fullname = os.path.join(sitedir, name)\n    try:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "addsitedir",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def addsitedir(sitedir, known_paths=None):\n    \"\"\"Add 'sitedir' argument to sys.path if missing and handle .pth files in\n    'sitedir'\"\"\"\n    if known_paths is None:\n        known_paths = _init_pathinfo()\n        reset = 1\n    else:\n        reset = 0\n    sitedir, sitedircase = makepath(sitedir)\n    if not sitedircase in known_paths:",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import addsitedir\n```\n\n```python\n\n\n```\n\n```python\ndef addsitedir(sitedir, known_paths=None):\n    \"\"\"Add 'sitedir' argument to sys.path if missing and handle .pth files in\n    'sitedir'\"\"\"\n    if known_paths is None:\n        known_paths = _init_pathinfo()\n        reset = 1\n    else:\n        reset = 0\n    sitedir, sitedircase = makepath(sitedir)\n    if not sitedircase in known_paths:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "addsitepackages",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def addsitepackages(known_paths, sys_prefix=sys.prefix, exec_prefix=sys.exec_prefix):\n    \"\"\"Add site-packages (and possibly site-python) to sys.path\"\"\"\n    prefixes = [os.path.join(sys_prefix, \"local\"), sys_prefix]\n    if exec_prefix != sys_prefix:\n        prefixes.append(os.path.join(exec_prefix, \"local\"))\n    for prefix in prefixes:\n        if prefix:\n            if sys.platform in (\"os2emx\", \"riscos\"):\n                sitedirs = [os.path.join(prefix, \"Lib\", \"site-packages\")]\n            elif _is_pypy:",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import addsitepackages\n```\n\n```python\n\n\n```\n\n```python\ndef addsitepackages(known_paths, sys_prefix=sys.prefix, exec_prefix=sys.exec_prefix):\n    \"\"\"Add site-packages (and possibly site-python) to sys.path\"\"\"\n    prefixes = [os.path.join(sys_prefix, \"local\"), sys_prefix]\n    if exec_prefix != sys_prefix:\n        prefixes.append(os.path.join(exec_prefix, \"local\"))\n    for prefix in prefixes:\n        if prefix:\n            if sys.platform in (\"os2emx\", \"riscos\"):\n                sitedirs = [os.path.join(prefix, \"Lib\", \"site-packages\")]\n            elif _is_pypy:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "check_enableusersite",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def check_enableusersite():\n    \"\"\"Check if user site directory is safe for inclusion\n    The function tests for the command line flag (including environment var),\n    process uid/gid equal to effective uid/gid.\n    None: Disabled for security reasons\n    False: Disabled by user (command line option)\n    True: Safe and enabled\n    \"\"\"\n    if hasattr(sys, \"flags\") and getattr(sys.flags, \"no_user_site\", False):\n        return False",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import check_enableusersite\n```\n\n```python\n\n\n```\n\n```python\ndef check_enableusersite():\n    \"\"\"Check if user site directory is safe for inclusion\n    The function tests for the command line flag (including environment var),\n    process uid/gid equal to effective uid/gid.\n    None: Disabled for security reasons\n    False: Disabled by user (command line option)\n    True: Safe and enabled\n    \"\"\"\n    if hasattr(sys, \"flags\") and getattr(sys.flags, \"no_user_site\", False):\n        return False\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "addusersitepackages",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def addusersitepackages(known_paths):\n    \"\"\"Add a per user site-package to sys.path\n    Each user has its own python directory with site-packages in the\n    home directory.\n    USER_BASE is the root directory for all Python versions\n    USER_SITE is the user specific site-packages directory\n    USER_SITE/.. can be used for data.\n    \"\"\"\n    global USER_BASE, USER_SITE, ENABLE_USER_SITE\n    env_base = os.environ.get(\"PYTHONUSERBASE\", None)",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import addusersitepackages\n```\n\n```python\n\n\n```\n\n```python\ndef addusersitepackages(known_paths):\n    \"\"\"Add a per user site-package to sys.path\n    Each user has its own python directory with site-packages in the\n    home directory.\n    USER_BASE is the root directory for all Python versions\n    USER_SITE is the user specific site-packages directory\n    USER_SITE/.. can be used for data.\n    \"\"\"\n    global USER_BASE, USER_SITE, ENABLE_USER_SITE\n    env_base = os.environ.get(\"PYTHONUSERBASE\", None)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "setBEGINLIBPATH",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def setBEGINLIBPATH():\n    \"\"\"The OS/2 EMX port has optional extension modules that do double duty\n    as DLLs (and must use the .DLL file extension) for other extensions.\n    The library search path needs to be amended so these will be found\n    during module import.  Use BEGINLIBPATH so that these are at the start\n    of the library search path.\n    \"\"\"\n    dllpath = os.path.join(sys.prefix, \"Lib\", \"lib-dynload\")\n    libpath = os.environ[\"BEGINLIBPATH\"].split(\";\")\n    if libpath[-1]:",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import setBEGINLIBPATH\n```\n\n```python\n\n\n```\n\n```python\ndef setBEGINLIBPATH():\n    \"\"\"The OS/2 EMX port has optional extension modules that do double duty\n    as DLLs (and must use the .DLL file extension) for other extensions.\n    The library search path needs to be amended so these will be found\n    during module import.  Use BEGINLIBPATH so that these are at the start\n    of the library search path.\n    \"\"\"\n    dllpath = os.path.join(sys.prefix, \"Lib\", \"lib-dynload\")\n    libpath = os.environ[\"BEGINLIBPATH\"].split(\";\")\n    if libpath[-1]:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "setquit",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def setquit():\n    \"\"\"Define new built-ins 'quit' and 'exit'.\n    These are simply strings that display a hint on how to exit.\n    \"\"\"\n    if os.sep == \":\":\n        eof = \"Cmd-Q\"\n    elif os.sep == \"\\\\\":\n        eof = \"Ctrl-Z plus Return\"\n    else:\n        eof = \"Ctrl-D (i.e. EOF)\"",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import setquit\n```\n\n```python\n\n\n```\n\n```python\ndef setquit():\n    \"\"\"Define new built-ins 'quit' and 'exit'.\n    These are simply strings that display a hint on how to exit.\n    \"\"\"\n    if os.sep == \":\":\n        eof = \"Cmd-Q\"\n    elif os.sep == \"\\\\\":\n        eof = \"Ctrl-Z plus Return\"\n    else:\n        eof = \"Ctrl-D (i.e. EOF)\"\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "setcopyright",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def setcopyright():\n    \"\"\"Set 'copyright' and 'credits' in __builtin__\"\"\"\n    builtins.copyright = _Printer(\"copyright\", sys.copyright)\n    if _is_pypy:\n        builtins.credits = _Printer(\"credits\", \"PyPy is maintained by the PyPy developers: http://pypy.org/\")\n    else:\n        builtins.credits = _Printer(\n            \"credits\",\n            \"\"\"\\\n    Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import setcopyright\n```\n\n```python\n\n\n```\n\n```python\ndef setcopyright():\n    \"\"\"Set 'copyright' and 'credits' in __builtin__\"\"\"\n    builtins.copyright = _Printer(\"copyright\", sys.copyright)\n    if _is_pypy:\n        builtins.credits = _Printer(\"credits\", \"PyPy is maintained by the PyPy developers: http://pypy.org/\")\n    else:\n        builtins.credits = _Printer(\n            \"credits\",\n            \"\"\"\\\n    Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "sethelper",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def sethelper():\n    builtins.help = _Helper()\ndef aliasmbcs():\n    \"\"\"On Windows, some default encodings are not provided by Python,\n    while they are always available as \"mbcs\" in each locale. Make\n    them usable by aliasing to \"mbcs\" in such a case.\"\"\"\n    if sys.platform == \"win32\":\n        import locale, codecs\n        enc = locale.getdefaultlocale()[1]\n        if enc.startswith(\"cp\"):  # \"cp***\" ?",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import sethelper\n```\n\n```python\n\n\n```\n\n```python\ndef sethelper():\n    builtins.help = _Helper()\ndef aliasmbcs():\n    \"\"\"On Windows, some default encodings are not provided by Python,\n    while they are always available as \"mbcs\" in each locale. Make\n    them usable by aliasing to \"mbcs\" in such a case.\"\"\"\n    if sys.platform == \"win32\":\n        import locale, codecs\n        enc = locale.getdefaultlocale()[1]\n        if enc.startswith(\"cp\"):  # \"cp***\" ?\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "aliasmbcs",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def aliasmbcs():\n    \"\"\"On Windows, some default encodings are not provided by Python,\n    while they are always available as \"mbcs\" in each locale. Make\n    them usable by aliasing to \"mbcs\" in such a case.\"\"\"\n    if sys.platform == \"win32\":\n        import locale, codecs\n        enc = locale.getdefaultlocale()[1]\n        if enc.startswith(\"cp\"):  # \"cp***\" ?\n            try:\n                codecs.lookup(enc)",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import aliasmbcs\n```\n\n```python\n\n\n```\n\n```python\ndef aliasmbcs():\n    \"\"\"On Windows, some default encodings are not provided by Python,\n    while they are always available as \"mbcs\" in each locale. Make\n    them usable by aliasing to \"mbcs\" in such a case.\"\"\"\n    if sys.platform == \"win32\":\n        import locale, codecs\n        enc = locale.getdefaultlocale()[1]\n        if enc.startswith(\"cp\"):  # \"cp***\" ?\n            try:\n                codecs.lookup(enc)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "setencoding",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def setencoding():\n    \"\"\"Set the string encoding used by the Unicode implementation.  The\n    default is 'ascii', but if you're willing to experiment, you can\n    change this.\"\"\"\n    encoding = \"ascii\"  # Default value set by _PyUnicode_Init()\n    if 0:\n        # Enable to support locale aware default string encodings.\n        import locale\n        loc = locale.getdefaultlocale()\n        if loc[1]:",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import setencoding\n```\n\n```python\n\n\n```\n\n```python\ndef setencoding():\n    \"\"\"Set the string encoding used by the Unicode implementation.  The\n    default is 'ascii', but if you're willing to experiment, you can\n    change this.\"\"\"\n    encoding = \"ascii\"  # Default value set by _PyUnicode_Init()\n    if 0:\n        # Enable to support locale aware default string encodings.\n        import locale\n        loc = locale.getdefaultlocale()\n        if loc[1]:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "execsitecustomize",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def execsitecustomize():\n    \"\"\"Run custom site specific code, if available.\"\"\"\n    try:\n        import sitecustomize\n    except ImportError:\n        pass\ndef virtual_install_main_packages():\n    f = open(os.path.join(os.path.dirname(__file__), \"orig-prefix.txt\"))\n    sys.real_prefix = f.read().strip()\n    f.close()",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import execsitecustomize\n```\n\n```python\n\n\n```\n\n```python\ndef execsitecustomize():\n    \"\"\"Run custom site specific code, if available.\"\"\"\n    try:\n        import sitecustomize\n    except ImportError:\n        pass\ndef virtual_install_main_packages():\n    f = open(os.path.join(os.path.dirname(__file__), \"orig-prefix.txt\"))\n    sys.real_prefix = f.read().strip()\n    f.close()\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "virtual_install_main_packages",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def virtual_install_main_packages():\n    f = open(os.path.join(os.path.dirname(__file__), \"orig-prefix.txt\"))\n    sys.real_prefix = f.read().strip()\n    f.close()\n    pos = 2\n    hardcoded_relative_dirs = []\n    if sys.path[0] == \"\":\n        pos += 1\n    if _is_pypy:\n        if sys.version_info > (3, 2):",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import virtual_install_main_packages\n```\n\n```python\n\n\n```\n\n```python\ndef virtual_install_main_packages():\n    f = open(os.path.join(os.path.dirname(__file__), \"orig-prefix.txt\"))\n    sys.real_prefix = f.read().strip()\n    f.close()\n    pos = 2\n    hardcoded_relative_dirs = []\n    if sys.path[0] == \"\":\n        pos += 1\n    if _is_pypy:\n        if sys.version_info > (3, 2):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "force_global_eggs_after_local_site_packages",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def force_global_eggs_after_local_site_packages():\n    \"\"\"\n    Force easy_installed eggs in the global environment to get placed\n    in sys.path after all packages inside the virtualenv.  This\n    maintains the \"least surprise\" result that packages in the\n    virtualenv always mask global packages, never the other way\n    around.\n    \"\"\"\n    egginsert = getattr(sys, \"__egginsert\", 0)\n    for i, path in enumerate(sys.path):",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import force_global_eggs_after_local_site_packages\n```\n\n```python\n\n\n```\n\n```python\ndef force_global_eggs_after_local_site_packages():\n    \"\"\"\n    Force easy_installed eggs in the global environment to get placed\n    in sys.path after all packages inside the virtualenv.  This\n    maintains the \"least surprise\" result that packages in the\n    virtualenv always mask global packages, never the other way\n    around.\n    \"\"\"\n    egginsert = getattr(sys, \"__egginsert\", 0)\n    for i, path in enumerate(sys.path):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "virtual_addsitepackages",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def virtual_addsitepackages(known_paths):\n    force_global_eggs_after_local_site_packages()\n    return addsitepackages(known_paths, sys_prefix=sys.real_prefix)\ndef execusercustomize():\n    \"\"\"Run custom user specific code, if available.\"\"\"\n    try:\n        import usercustomize\n    except ImportError:\n        pass\ndef enablerlcompleter():",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import virtual_addsitepackages\n```\n\n```python\n\n\n```\n\n```python\ndef virtual_addsitepackages(known_paths):\n    force_global_eggs_after_local_site_packages()\n    return addsitepackages(known_paths, sys_prefix=sys.real_prefix)\ndef execusercustomize():\n    \"\"\"Run custom user specific code, if available.\"\"\"\n    try:\n        import usercustomize\n    except ImportError:\n        pass\ndef enablerlcompleter():\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "execusercustomize",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def execusercustomize():\n    \"\"\"Run custom user specific code, if available.\"\"\"\n    try:\n        import usercustomize\n    except ImportError:\n        pass\ndef enablerlcompleter():\n    \"\"\"Enable default readline configuration on interactive prompts, by\n    registering a sys.__interactivehook__.\n    If the readline module can be imported, the hook will set the Tab key",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import execusercustomize\n```\n\n```python\n\n\n```\n\n```python\ndef execusercustomize():\n    \"\"\"Run custom user specific code, if available.\"\"\"\n    try:\n        import usercustomize\n    except ImportError:\n        pass\ndef enablerlcompleter():\n    \"\"\"Enable default readline configuration on interactive prompts, by\n    registering a sys.__interactivehook__.\n    If the readline module can be imported, the hook will set the Tab key\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "enablerlcompleter",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def enablerlcompleter():\n    \"\"\"Enable default readline configuration on interactive prompts, by\n    registering a sys.__interactivehook__.\n    If the readline module can be imported, the hook will set the Tab key\n    as completion key and register ~/.python_history as history file.\n    This can be overridden in the sitecustomize or usercustomize module,\n    or in a PYTHONSTARTUP file.\n    \"\"\"\n    def register_readline():\n        import atexit",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import enablerlcompleter\n```\n\n```python\n\n\n```\n\n```python\ndef enablerlcompleter():\n    \"\"\"Enable default readline configuration on interactive prompts, by\n    registering a sys.__interactivehook__.\n    If the readline module can be imported, the hook will set the Tab key\n    as completion key and register ~/.python_history as history file.\n    This can be overridden in the sitecustomize or usercustomize module,\n    or in a PYTHONSTARTUP file.\n    \"\"\"\n    def register_readline():\n        import atexit\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "def main():\n    global ENABLE_USER_SITE\n    virtual_install_main_packages()\n    if _is_pypy:\n        import_builtin_stuff()\n    abs__file__()\n    paths_in_sys = removeduppaths()\n    if os.name == \"posix\" and sys.path and os.path.basename(sys.path[-1]) == \"Modules\":\n        addbuilddir()\n    GLOBAL_SITE_PACKAGES = not os.path.exists(os.path.join(os.path.dirname(__file__), \"no-global-site-packages.txt\"))",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import main\n```\n\n```python\n\n\n```\n\n```python\ndef main():\n    global ENABLE_USER_SITE\n    virtual_install_main_packages()\n    if _is_pypy:\n        import_builtin_stuff()\n    abs__file__()\n    paths_in_sys = removeduppaths()\n    if os.name == \"posix\" and sys.path and os.path.basename(sys.path[-1]) == \"Modules\":\n        addbuilddir()\n    GLOBAL_SITE_PACKAGES = not os.path.exists(os.path.join(os.path.dirname(__file__), \"no-global-site-packages.txt\"))\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "PREFIXES",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "PREFIXES = [sys.prefix, sys.exec_prefix]\n# Enable per user site-packages directory\n# set it to False to disable the feature or True to force the feature\nENABLE_USER_SITE = None\n# for distutils.commands.install\nUSER_SITE = None\nUSER_BASE = None\n_is_64bit = (getattr(sys, \"maxsize\", None) or getattr(sys, \"maxint\")) > 2 ** 32\n_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import PREFIXES\n```\n\n```python\n\n\n```\n\n```python\nPREFIXES = [sys.prefix, sys.exec_prefix]\n# Enable per user site-packages directory\n# set it to False to disable the feature or True to force the feature\nENABLE_USER_SITE = None\n# for distutils.commands.install\nUSER_SITE = None\nUSER_BASE = None\n_is_64bit = (getattr(sys, \"maxsize\", None) or getattr(sys, \"maxint\")) > 2 ** 32\n_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "ENABLE_USER_SITE",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "ENABLE_USER_SITE = None\n# for distutils.commands.install\nUSER_SITE = None\nUSER_BASE = None\n_is_64bit = (getattr(sys, \"maxsize\", None) or getattr(sys, \"maxint\")) > 2 ** 32\n_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import ENABLE_USER_SITE\n```\n\n```python\n\n\n```\n\n```python\nENABLE_USER_SITE = None\n# for distutils.commands.install\nUSER_SITE = None\nUSER_BASE = None\n_is_64bit = (getattr(sys, \"maxsize\", None) or getattr(sys, \"maxint\")) > 2 ** 32\n_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "USER_SITE",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "USER_SITE = None\nUSER_BASE = None\n_is_64bit = (getattr(sys, \"maxsize\", None) or getattr(sys, \"maxint\")) > 2 ** 32\n_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)\ndef abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import USER_SITE\n```\n\n```python\n\n\n```\n\n```python\nUSER_SITE = None\nUSER_BASE = None\n_is_64bit = (getattr(sys, \"maxsize\", None) or getattr(sys, \"maxint\")) > 2 ** 32\n_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)\ndef abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "USER_BASE",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "USER_BASE = None\n_is_64bit = (getattr(sys, \"maxsize\", None) or getattr(sys, \"maxint\")) > 2 ** 32\n_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)\ndef abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"\n    for m in sys.modules.values():",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import USER_BASE\n```\n\n```python\n\n\n```\n\n```python\nUSER_BASE = None\n_is_64bit = (getattr(sys, \"maxsize\", None) or getattr(sys, \"maxint\")) > 2 ** 32\n_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)\ndef abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"\n    for m in sys.modules.values():\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "_is_64bit",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "_is_64bit = (getattr(sys, \"maxsize\", None) or getattr(sys, \"maxint\")) > 2 ** 32\n_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)\ndef abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"\n    for m in sys.modules.values():\n        f = getattr(m, \"__file__\", None)",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import _is_64bit\n```\n\n```python\n\n\n```\n\n```python\n_is_64bit = (getattr(sys, \"maxsize\", None) or getattr(sys, \"maxint\")) > 2 ** 32\n_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)\ndef abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"\n    for m in sys.modules.values():\n        f = getattr(m, \"__file__\", None)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "_is_pypy",
+        "kind": 5,
+        "importPath": "env.lib.python3.8.site",
+        "description": "env.lib.python3.8.site",
+        "peekOfCode": "_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)\ndef abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"\n    for m in sys.modules.values():\n        f = getattr(m, \"__file__\", None)\n        if f is None:",
+        "detail": "env.lib.python3.8.site",
+        "documentation": {
+            "value": "\n```python\nfrom env.lib.python3.8.site import _is_pypy\n```\n\n```python\n\n\n```\n\n```python\n_is_pypy = hasattr(sys, \"pypy_version_info\")\ndef makepath(*paths):\n    dir = os.path.join(*paths)\n    dir = os.path.abspath(dir)\n    return dir, os.path.normcase(dir)\ndef abs__file__():\n    \"\"\"Set all module' __file__ attribute to an absolute path\"\"\"\n    for m in sys.modules.values():\n        f = getattr(m, \"__file__\", None)\n        if f is None:\n```\n",
+            "supportThemeIcons": false
+        }
+    }
+]
